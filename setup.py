@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text()
 
 setuptools.setup(
     name="streamlit-picture-carousel",
-    version="0.1.0",
+    version="0.1.1",
     author="Rafal Cegiela",
     author_email="rcegiela@gmail.com",
     description="Displays 3d carousel of pictures",
