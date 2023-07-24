@@ -21,8 +21,8 @@ function onRender(event) {
     // Grab the label and default value that the user specified
     const {n_pics,cell,img_path,img_list,img_size} = event.detail.args;
 
-    //const numpara = document.getElementById("number_para")
-    //numpara.innerHTML = location.href
+    //const numpara = document.getElementById("number_para");
+    //numpara.innerHTML = img_path;
 
     const caiframe = document.getElementById("carousel_iframe")
     caiframe.src = ("./carousel/carousel.html?n_pics="+n_pics

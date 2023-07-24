@@ -38,7 +38,9 @@ def st_picture_carousel(
 
 def main():
     st.subheader("Example [st.header]")
-    img_list=os.listdir("static/portraits")
+    # st.write(os.getcwd())
+    img_list=os.listdir("./streamlit_picture_carousel/src/static/portraits")
+    # st.write(img_list)
     st_picture_carousel(cell=("250px", "200px"),
                         img_path=r"/app/static/portraits",
                         img_list=img_list,

@@ -12,7 +12,7 @@ var img_size = urlParams.get('img_size').split(',');
 // const testpara = document.getElementById("test_para")
 // testpara.innerHTML = location.href
 
-if (img_path) {
+ if (img_path) {
     n_pics=img_list.length;
 }
 
