@@ -42,7 +42,7 @@ def main():
     st_picture_carousel(cell=("250px", "200px"),
                         img_path=r"/app/static/portraits",
                         img_list=img_list,
-                        img_size=("180px", "180px")))
+                        img_size=("180px", "180px"))
 
 if __name__ == "__main__":
     main()
