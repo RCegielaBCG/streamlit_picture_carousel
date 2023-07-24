@@ -19,13 +19,17 @@ function onRender(event) {
     // const {input1, input2, input3} = event.detail.args
 
     // Grab the label and default value that the user specified
-    const {n_pics} = event.detail.args;
+    const {n_pics,cell,img_path,img_list,img_size} = event.detail.args;
 
-    // const para = document.getElementById("number_para")
-    // para.innerHTML = n_pics
+    //const numpara = document.getElementById("number_para")
+    //numpara.innerHTML = location.href
 
     const caiframe = document.getElementById("carousel_iframe")
-    caiframe.src = "./carousel/carousel.html?n_pics="+n_pics
+    caiframe.src = ("./carousel/carousel.html?n_pics="+n_pics
+        +"&cell="+cell
+        +"&img_path="+img_path
+        +"&img_list="+img_list
+        +"&img_size="+img_size)
 
     // You'll most likely want to pass some data back to Python like this
     // sendValue({output1: "foo", output2: "bar"})

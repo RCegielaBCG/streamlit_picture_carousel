@@ -3,17 +3,39 @@ var cellCount = 9;
 var selectedIndex = 0;
 
 var urlParams = new URLSearchParams(window.location.search);
-var n = urlParams.get('n_pics');
+var n_pics = urlParams.get('n_pics');
+var cell = urlParams.get('cell').split(',');
+var img_path = urlParams.get('img_path');
+var img_list = urlParams.get('img_list').split(',');
+var img_size = urlParams.get('img_size').split(',');
 
-//var n = 12
-for (var i = 0; i < n; i++) {
+const testpara = document.getElementById("test_para")
+testpara.innerHTML = location.href
+
+if (img_path) {
+    n_pics=img_list.length;
+}
+
+for (var i = 0; i < n_pics; i++) {
   var div = document.createElement("div");
   div.className = 'carousel__cell';
-  var ith = Math.round(i*360/n);
-  div.innerHTML = i+1;
-  div.style.background = 'hsla('+ ith +', 100%, 50%, 0.8)'
-  div.style.transform = 'rotateY('+ith+'deg) translateZ(500px)'
+  div.style.width = cell[0];
+  div.style.height = cell[1];
+  var ith = Math.round(i*360/n_pics);
+  div.style.background = 'hsla('+ ith +', 100%, 50%, 0.8)';
+  div.style.transform = 'rotateY('+ith+'deg) translateZ(500px)';
   carousel.appendChild(div);
+
+  if (img_path) {
+    var img = document.createElement("img");
+    p = img_path+"/"+img_list[i];
+    img.src = p;
+    img.style.maxWidth = img_size[0];
+    img.style.maxHeight = img_size[1];
+    div.appendChild(img);
+  } else {
+    div.innerHTML = i+1
+  }
 }
 
 function rotateCarousel() {

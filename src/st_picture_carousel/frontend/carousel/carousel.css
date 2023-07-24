@@ -62,9 +62,16 @@ body {
 .carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(500px); }
 */
 
-.carousel-options {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  background: hsla(0, 0%, 100%, 0.8);
+
+.button {
+    .stButton;
+    transition-duration: 0.4s;
+    width: 100px;
+    background-color: grey;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
 }
