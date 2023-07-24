@@ -39,11 +39,10 @@ def st_picture_carousel(
 def main():
     st.subheader("Example [st.header]")
     img_list=os.listdir("static/portraits")
-    st_picture_carousel(n_pics=9,
-                        cell=('300px', '150px'),
-                        img_path=r"/static/portraits",
+    st_picture_carousel(cell=("250px", "200px"),
+                        img_path=r"/app/static/portraits",
                         img_list=img_list,
-                        img_size=('180px', '130px'))
+                        img_size=("180px", "180px")))
 
 if __name__ == "__main__":
     main()

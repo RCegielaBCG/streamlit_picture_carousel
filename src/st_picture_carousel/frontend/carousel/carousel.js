@@ -9,8 +9,8 @@ var img_path = urlParams.get('img_path');
 var img_list = urlParams.get('img_list').split(',');
 var img_size = urlParams.get('img_size').split(',');
 
-const testpara = document.getElementById("test_para")
-testpara.innerHTML = location.href
+// const testpara = document.getElementById("test_para")
+// testpara.innerHTML = location.href
 
 if (img_path) {
     n_pics=img_list.length;
